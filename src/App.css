@@ -24,9 +24,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +32,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.menu {
+
+}
+.cuisine{
+  margin: 30px auto;
+  width: 500px;
+  background-color:rgb(241, 233, 233);
+}
+
+.cuisine img{
+  width: 300px;
+
 }

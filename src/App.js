@@ -13,15 +13,15 @@ class App extends React.Component {
     ];
 
     const menu = cuisines.map((cuisine) =>
-    <div key={cuisine.id}>
-      <h3>{cuisine.name}</h3>
-      <img src={`${process.env.PUBLIC_URL}/${cuisine.pic}`} alt="海の写真" title="空と海"/>
-      <p>{cuisine.price} 円</p>
-      <p>{cuisine.content}</p>
-    </div>
+      <div key={cuisine.id} class="cuisine">
+        <h3>{cuisine.name}</h3>
+        <img src={`${process.env.PUBLIC_URL}/${cuisine.pic}`} alt="海の写真" title="空と海"/>
+        <p>{cuisine.price} 円</p>
+        <p>{cuisine.content}</p>
+      </div>
     );
     return (
-        <div>
+        <div class="menu">
           {menu}
         </div>
     );
