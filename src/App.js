@@ -43,7 +43,7 @@ class App extends React.Component {
     const newCuisines = alterCuisine(cuisines);
     const menu = newCuisines.map((cuisine) =>
     <div class="cuisine">
-      <div key={cuisine[0].id} class="cuisine1">
+      <div key={cuisine[0].id} class="sub_cuisine">
         <h3>{cuisine[0].name}</h3>
         <img src={`${process.env.PUBLIC_URL}/${cuisine[0].pic}`} alt="" title="" />
         <p>{cuisine[0].price} 円</p>
@@ -52,7 +52,7 @@ class App extends React.Component {
       </div>
       { 
         Object.keys(cuisine[1]).length != 1 ? (
-        <div key={cuisine[1].id} class="cuisine2">
+        <div key={cuisine[1].id} class="sub_cuisine">
           <h3>{cuisine[1].name}</h3>
           <img src={`${process.env.PUBLIC_URL}/${cuisine[1].pic}`} alt="" title="" />
           <p>{cuisine[1].price} 円</p>
@@ -63,7 +63,7 @@ class App extends React.Component {
       }
       { 
         Object.keys(cuisine[2]).length != 1 ? (
-        <div key={cuisine[2].id} class="cuisine3">
+        <div key={cuisine[2].id} class="sub_cuisine">
           <h3>{cuisine[2].name}</h3>
           <img src={`${process.env.PUBLIC_URL}/${cuisine[2].pic}`} alt="" title="" />
           <p>{cuisine[2].price} 円</p>
@@ -77,7 +77,6 @@ class App extends React.Component {
     return (
         <div class="menu">
           {menu}
-          {Object.keys(newCuisines[2][1]).length}
         </div>
     );
   }

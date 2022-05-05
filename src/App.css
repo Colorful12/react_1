@@ -35,15 +35,22 @@
 }
 
 .menu {
-
+  margin: auto;
+  background-color: aquamarine;
 }
 .cuisine{
+  background-color: black;
+  display: flex;
+  margin: auto;
   margin: 30px auto;
-  width: 500px;
+}
+
+.sub_cuisine{
+  width: 300px;
+  margin: 0px 20px;
   background-color:rgb(241, 233, 233);
 }
 
 .cuisine img{
   width: 300px;
-
 }
