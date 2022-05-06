@@ -1,12 +1,22 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from 'react';
 
-
-export default function Header(props) {
-  return (
-        <header>
-            ヘッダー部分(色やテキストは仮)
-        </header>
-    );
- 
+class Head extends React.Component {
+    render() {
+        return (
+            <header>
+                <div class="main_img">
+                    <img src="mainpic.png"></img>
+                </div>
+                <div class="shopname">
+                    React Practice
+                </div>
+                <div class="inner_nav">
+                    <a href="" class="tel">お問い合わせ</a>
+                    <a href="" class="acs">アクセス</a>
+                </div>
+            </header>
+        );
+    }
 }
+
+export default Head;

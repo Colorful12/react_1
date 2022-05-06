@@ -14,3 +14,132 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/*メニュー*/
+.menu {
+  margin: 100px auto 30px;
+  width: fit-content;
+}
+.cuisine{
+  margin: 30px 0px;
+  display: flex;
+}
+
+.sub_cuisine{
+  width: 300px;
+  margin: 0px 20px;
+  border: solid;
+  border-color: #d6d6da;
+}
+
+.sub_cuisine img{
+  background-color: #282c34;
+  height: 200px;
+}
+
+.buy{
+  display: flex;
+}
+
+.buy p{
+  font-size: large;
+}
+
+.btn{
+  font-size: 1.0rem;
+  font-weight: 600;
+  line-height: 1.0;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background-color: #d83a47;
+  border-radius: 0.5rem;
+}
+
+.btn--red.btn--cubic {
+  border-bottom: 5px solid #9f000c;
+}
+
+.btn--red.btn--cubic:hover {
+  margin-top: 3px;
+  border-bottom: 2px solid #9f000c;
+}
+
+.btn--radius {
+  border-radius: 100vh;
+}
+
+
+/*ヘッダー*/
+header{
+  text-align: center;
+}
+
+.main_img{
+  position: relative;
+  z-index:10;
+  opacity: 0.5;
+}
+.shopname{
+  background-color: #d83a47;
+  position: relative;
+  z-index:20;
+  height: 150px;
+  margin-top: -100px;
+  color: #fff;
+  font-size: 10rem;
+}
+
+.inner_nav{
+  position: absolute;
+  z-index:20;
+  display: flex;
+  flex-direction: column;
+  top: 1.5rem;
+  right: 3.0rem;
+}
+
+.tel{
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.4rem;
+  background: #d83a47;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  text-align:center;
+  line-height: 150px;
+}
+.tel:hover{
+  opacity: 0.8;
+}
+
+.acs{
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.4rem;
+  background: #d83a47;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  text-align:center;
+  line-height: 150px;
+}
+.acs:hover{
+  opacity: 0.8;
+}
