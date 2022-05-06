@@ -99,22 +99,23 @@ export default function Menu() {
       <div class="menu">
         {menu}
         {console.log(cartDetails)}
+      </div>
+      <div class="cart">
         <ul>
           {Object.values(cartDetails).map((cart) => {
             return (
               <li key={cart.id}>
-
                 {cart.name} - {cart.formattedPrice} * {cart.quantity} = {cart.formattedValue}
                 <button onClick={() => decrementItem(cart.id)}>１つ減らす</button>
-               <button onClick={() => incrementItem(cart.id)}>１つ増やす</button>
-              <button onClick={() => removeItem(cart.id)}>削除</button>
+                <button onClick={() => incrementItem(cart.id)}>１つ増やす</button>
+                <button onClick={() => removeItem(cart.id)}>削除</button>
               </li>
             )
           })}
           <li>合計: {formattedTotalPrice}</li>
         </ul>
         <button
-                    variant='primary'
+          variant='primary'
                     disabled={cartCount < 1}
                     onClick={async () => {
                         try {
@@ -124,12 +125,11 @@ export default function Menu() {
                             window.alert(e.message);
                         }
                     }}
-                >
-                    注文する
-                </button>
-                <button variant="outline-danger" onClick={() => clearCart()}>カートを空にする</button>
-                
-      </div>
+         >
+           注文する
+        </button>
+        <button variant="outline-danger" onClick={() => clearCart()}>カートを空にする</button>
+      </div>         
     </main>
   );
 }
