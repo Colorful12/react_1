@@ -44,31 +44,34 @@ class App extends React.Component {
     const menu = newCuisines.map((cuisine) =>
     <div class="cuisine">
       <div key={cuisine[0].id} class="sub_cuisine">
-        <h3>{cuisine[0].name}</h3>
         <img src={`${process.env.PUBLIC_URL}/${cuisine[0].pic}`} alt="" title="" />
-        <p>{cuisine[0].price} 円</p>
-        <p>{cuisine[0].content}</p>
-        <button onClick={() => menuClick(cuisine[0])}>購入</button>
+        <h3>{cuisine[0].name}</h3>
+        <div class="buy">
+          <p>￥{cuisine[0].price} </p>
+          <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[0])}>購入</button>
+        </div>
       </div>
       { 
         Object.keys(cuisine[1]).length != 1 ? (
         <div key={cuisine[1].id} class="sub_cuisine">
-          <h3>{cuisine[1].name}</h3>
           <img src={`${process.env.PUBLIC_URL}/${cuisine[1].pic}`} alt="" title="" />
-          <p>{cuisine[1].price} 円</p>
-          <p>{cuisine[1].content}</p>
-          <button onClick={() => menuClick(cuisine[1])}>購入</button>
+          <h3>{cuisine[1].name}</h3>
+          <div class="buy">
+            <p>￥{cuisine[1].price}</p>
+              <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[1])}>購入</button>
+          </div>
         </div>
       ) : ( <div></div> )
       }
       { 
         Object.keys(cuisine[2]).length != 1 ? (
         <div key={cuisine[2].id} class="sub_cuisine">
-          <h3>{cuisine[2].name}</h3>
           <img src={`${process.env.PUBLIC_URL}/${cuisine[2].pic}`} alt="" title="" />
-          <p>{cuisine[2].price} 円</p>
-          <p>{cuisine[2].content}</p>
-          <button onClick={() => menuClick(cuisine[2])}>購入</button>
+          <h3>{cuisine[2].name}</h3>
+          <div class="buy">
+            <p>￥{cuisine[2].price}</p>
+            <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[2])}>購入</button>
+          </div>
         </div>
       ) : ( <div></div> )
       }

@@ -5,7 +5,16 @@ class Head extends React.Component {
     render() {
         return (
             <header>
-                ヘッダー部分(色やテキストは仮)
+                <div class="main_img">
+                    <img src={`${process.env.PUBLIC_URL}/mainpic.png`}></img>
+                </div>
+                <div class="shopname">
+                    React Practice
+                </div>
+                <div class="inner_nav">
+                    <a href="" class="tel">お問い合わせ</a>
+                    <a href="" class="acs">アクセス</a>
+                </div>
             </header>
         );
     }

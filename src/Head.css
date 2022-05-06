@@ -1,5 +1,60 @@
 header{
     text-align: center;
-    height: 100px;
-    background-color: gold;
+}
+
+.main_img{
+    position: relative;
+    z-index:10;
+    opacity: 0.5;
+}
+.shopname{
+    background-color: #d83a47;
+    position: relative;
+    z-index:20;
+    height: 150px;
+    margin-top: -100px;
+    color: #fff;
+    font-size: 10rem;
+}
+
+.inner_nav{
+    position: absolute;
+    z-index:20;
+    display: flex;
+    flex-direction: column;
+    top: 1.5rem;
+    right: 3.0rem;
+}
+
+.tel{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.4rem;
+    background: #d83a47;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    text-align:center;
+    line-height: 150px;
+}
+.tel:hover{
+    opacity: 0.8;
+}
+
+.acs{
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.4rem;
+    background: #d83a47;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    text-align:center;
+    line-height: 150px;
+}
+.acs:hover{
+    opacity: 0.8;
 }

@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -25,32 +14,67 @@
 }
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .menu {
-  margin: auto;
-  background-color: aquamarine;
+  margin: 100px auto 30px;
+  width: fit-content;
 }
 .cuisine{
-  background-color: black;
+  margin: 30px 0px;
   display: flex;
-  margin: auto;
-  margin: 30px auto;
 }
 
 .sub_cuisine{
   width: 300px;
   margin: 0px 20px;
-  background-color:rgb(241, 233, 233);
+  border: solid;
+  border-color: #d6d6da;
 }
 
-.cuisine img{
-  width: 300px;
+.sub_cuisine img{
+  background-color: #282c34;
+  height: 200px;
+}
+
+.buy{
+  display: flex;
+}
+
+.buy p{
+  font-size: large;
+}
+
+.btn{
+  font-size: 1.0rem;
+  font-weight: 600;
+  line-height: 1.0;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background-color: #d83a47;
+  border-radius: 0.5rem;
+}
+
+.btn--red.btn--cubic {
+  border-bottom: 5px solid #9f000c;
+}
+
+.btn--red.btn--cubic:hover {
+  margin-top: 3px;
+  border-bottom: 2px solid #9f000c;
+}
+
+.btn--radius {
+  border-radius: 100vh;
 }
