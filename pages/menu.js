@@ -7,7 +7,6 @@ import * as React from "react"
 
 export default function Menu() {
    
-
     const cuisines = [
         {id: 1, category: '',  name: 'ステーキ', price: 1000, content: '', pic: 'food_stake.png',url:'https://buy.stripe.com/test_6oEcQj3fJ68f7Ju6oq',price_id:'price_1KupKQKMUTyFBj1fQvNkAPq9'},
         {id: 2, category: '', name: 'ピザ', price: 700, content: '', pic: 'pizza_margherita.png',url:'https://buy.stripe.com/test_9AQcQj6rVbszbZK7sv',price_id:'price_1KupKwKMUTyFBj1frmjA2mua'},
