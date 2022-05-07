@@ -61,8 +61,8 @@ export default function Menu() {
       <h3>{cuisine[0].name}</h3>
       <div class="buy">
         <p>￥{cuisine[0].price} </p>
-        <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[0])}>すぐに購入</button>
-        <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[0])}>カートに追加</button>
+        <button class="btn btn1 btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[0])}>すぐに購入</button>
+        <button class="btn btn2 btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[0])}>カートに追加</button>
       </div>
     </div>
     { 
@@ -72,8 +72,8 @@ export default function Menu() {
         <h3>{cuisine[1].name}</h3>
         <div class="buy">
           <p>￥{cuisine[1].price}</p>
-          <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[1])}>すぐに購入</button>
-          <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[1])}>カートに追加</button>
+          <button class="btn btn1 btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[1])}>すぐに購入</button>
+          <button class="btn btn2 btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[1])}>カートに追加</button>
         </div>
       </div>
     ) : ( <div></div> )
@@ -85,8 +85,8 @@ export default function Menu() {
         <h3>{cuisine[2].name}</h3>
         <div class="buy">
           <p>￥{cuisine[2].price}</p>
-          <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[2])}>すぐに購入</button>
-          <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[2])}>カートに追加</button>
+          <button class="btn btn1 btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[2])}>すぐに購入</button>
+          <button class="btn btn2 btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[2])}>カートに追加</button>
         </div>
       </div>
     ) : ( <div></div> )
@@ -100,6 +100,7 @@ export default function Menu() {
         {menu}
         {console.log(cartDetails)}
       </div>
+      <i class="gg-shopping-cart"></i>
       <div class="cart">
         <ul>
           {Object.values(cartDetails).map((cart) => {
