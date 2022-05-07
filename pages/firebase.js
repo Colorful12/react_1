@@ -1,6 +1,11 @@
 
-import firebase from 'firebase/compat/app';
+import firebase from 'firebase/compat/auth';
 import 'firebase/compat/auth';
+
+import { getApps, initializeApp } from "firebase/app";
+import {getAuth} from 'firebase/auth'
+
+
 
 // import firebase from 'firebase/app';
 // import 'firebase/auth';
@@ -14,7 +19,10 @@ const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 }
 
-if (firebase.apps.length === 0) {
-    firebase.initializeApp(firebaseConfig);
-  }
-export const auth = firebase.auth();
+if (getApps().length < 1) {
+  initializeApp(firebaseConfig);
+  // Initialize other firebase products here
+}
+
+export const auth = getAuth();
+

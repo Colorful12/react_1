@@ -1,6 +1,7 @@
 import { auth } from './firebase';
 import { AuthProvider } from './context/AuthContext';
 import { useAuthContext } from './context/AuthContext';
+import Header from './header'
 
 export default function SignUp() {
 
@@ -20,6 +21,8 @@ export default function SignUp() {
     return (
         
          <div style={{ margin: '2em' }}>
+          <Header/>
+
          <h1>ユーザ登録</h1>
          <form onSubmit={handleSubmit}>
         <div>

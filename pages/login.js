@@ -1,6 +1,7 @@
 import { auth } from './firebase';
 import { Link } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import Header from './header'
 
 const Login = () => {
   const handleSubmit = (event) => {
@@ -17,6 +18,7 @@ signInWithEmailAndPassword(auth, email, password)
 
   return (
     <div>
+      <Header/>
       <h1>ログイン</h1>
       <form onSubmit={handleSubmit}>
         <div>
