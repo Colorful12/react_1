@@ -1,19 +1,22 @@
  import '../styles/globals.css'
  import { CartProvider } from 'use-shopping-cart'
+ 
 
 function MyApp({ Component, pageProps }) {
 //   return <Component {...pageProps} />
 return (
+ 
      <CartProvider
        mode={"payment"}
        cartMode={"client-only"}
        stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
-       successUrl={'http://localhost:3000/api/after/'}
+       successUrl={'http://localhost:3000/'}
        cancelUrl={'http://localhost:3000'}
        currency={'jpy'}
      >
        <Component {...pageProps} />
      </CartProvider>
+     
    )
 }
 

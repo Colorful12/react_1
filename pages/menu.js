@@ -13,7 +13,7 @@ export default function Menu() {
         {id: 4, category: '', name: 'マリトッツォ', price: 350, content: '', pic: 'sweets_maritozzo_ichigo.png',url:'https://buy.stripe.com/test_eVabMf17B0NV5Bm3ch',price_id:'price_1KupMRKMUTyFBj1fTFto93Ff'},
         {id: 5, category: '', name: '醤油ラーメン', price: 800, content: '', pic: 'ramen_top_syouyu.png',url:'https://buy.stripe.com/test_3cs4jNaIbaovd3OdQW',price_id:'price_1KupN5KMUTyFBj1fzageak0Q'},
         {id: 6, category: '', name: '豚骨ラーメン', price: 850, content: '', pic: 'ramen_top_tonkotsu.png',url:'https://buy.stripe.com/test_4gwg2vbMffIP9RC9AH',price_id:'price_1KupNYKMUTyFBj1foFvwlLCp'},
-        {id: 7, category: '', name: '和風定食', price: 900, content: '', pic: 'teisyoku_hiyayakko.png', url: '', price_id: ''}
+        {id: 7, category: '', name: '和風定食', price: 900, content: '', pic: 'teisyoku_hiyayakko.png', url: 'https://buy.stripe.com/test_5kA8A3cQjeELe7S5ks', price_id: 'price_1KweiJKMUTyFBj1fUflmNhjS'}
     ];
 
     const { addItem } = useShoppingCart()
