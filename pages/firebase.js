@@ -2,6 +2,9 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 
+// import firebase from 'firebase/app';
+// import 'firebase/auth';
+
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
     authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -11,6 +14,7 @@ const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 }
 
-firebase.initializeApp(firebaseConfig);
-
+if (firebase.apps.length === 0) {
+    firebase.initializeApp(firebaseConfig);
+  }
 export const auth = firebase.auth();

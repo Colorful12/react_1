@@ -1,11 +1,18 @@
 import { auth } from './firebase';
 import { Link } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
   const handleSubmit = (event) => {
-    event.preventDefault();
-    const { email, password } = event.target.elements;
-    auth.signInWithEmailAndPassword(email.value, password.value);
+    const auth = getAuth();
+signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in
+    const user = userCredential.user;
+    window.open('http://localhost:3000/')
+    // ...
+  })
+   
   };
 
   return (

@@ -2,7 +2,7 @@ import { auth } from './firebase';
 import { AuthProvider } from './context/AuthContext';
 import { useAuthContext } from './context/AuthContext';
 
-export default function Home() {
+export default function SignUp() {
 
     
 
@@ -18,11 +18,8 @@ export default function Home() {
     
 
     return (
-        <AuthProvider>
         
-        <div style={{ margin: '2em' }}>
-      
-        <div style={{ margin: '2em' }}>
+         <div style={{ margin: '2em' }}>
          <h1>ユーザ登録</h1>
          <form onSubmit={handleSubmit}>
         <div>
@@ -38,7 +35,6 @@ export default function Home() {
         </div>
       </form>
       </div>
-      </div>
-      </AuthProvider>
+     
       )
     }
