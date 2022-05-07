@@ -105,17 +105,25 @@ export default function Menu() {
         <ul>
           {Object.values(cartDetails).map((cart) => {
             return (
-              <li key={cart.id}>
-                {cart.name} - {cart.formattedPrice} * {cart.quantity} = {cart.formattedValue}
-                <button onClick={() => decrementItem(cart.id)}>１つ減らす</button>
-                <button onClick={() => incrementItem(cart.id)}>１つ増やす</button>
-                <button onClick={() => removeItem(cart.id)}>削除</button>
-              </li>
+              <div class="each">
+                <li key={cart.id}>
+                  <button class="btn--cancel" onClick={() => removeItem(cart.id)}>×</button>
+                  <div class="menuname">{cart.name}</div>
+                  <div class="price">
+                    {cart.formattedValue}
+                    <div class="inc_dec">
+                      <button  onClick={() => decrementItem(cart.id)}>-</button>
+                      <div class="eachsum"> {cart.quantity}</div>
+                      <button  onClick={() => incrementItem(cart.id)}>+</button>
+                    </div>
+                  </div>
+                </li>
+              </div>
             )
           })}
-          <li>合計: {formattedTotalPrice}</li>
+          <li class="sum">合計 : {formattedTotalPrice}</li>
         </ul>
-        <button
+        <button class="btn--order comp"
           variant='primary'
                     disabled={cartCount < 1}
                     onClick={async () => {
@@ -129,7 +137,7 @@ export default function Menu() {
          >
            注文する
         </button>
-        <button variant="outline-danger" onClick={() => clearCart()}>カートを空にする</button>
+        <button class="btn--order" variant="outline-danger" onClick={() => clearCart()}>カートを空にする</button>
       </div>         
     </main>
   );
