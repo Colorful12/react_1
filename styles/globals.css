@@ -47,6 +47,7 @@ header{
 
 .tel{
   text-decoration: none;
+  margin-top: 20px;
   display: inline-block;
   color: #fff;
   font-size: 1.4rem;
@@ -75,6 +76,25 @@ header{
   line-height: 150px;
 }
 .acs:hover{
+  opacity: 0.8;
+}
+
+.inner_nav button{
+  border: 0;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.4rem;
+  background: #888888;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  text-align:center;
+  line-height: 150px;
+}
+
+.inner_nav button:hover{
   opacity: 0.8;
 }
 
@@ -414,3 +434,12 @@ header{
   position: absolute;
   left: -14%;
 }
+
+/* ログアウト周辺 */
+
+.state{
+  display: flex;
+  position: relative;
+}
+
+
