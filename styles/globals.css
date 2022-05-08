@@ -1,5 +1,6 @@
 html,
 body {
+  background-color: #F4F5F7;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -14,73 +15,6 @@ a {
 * {
   box-sizing: border-box;
 }
-
-/*メニュー*/
-.menu {
-  margin: 100px auto 30px;
-  width: fit-content;
-}
-.cuisine{
-  margin: 30px 0px;
-  display: flex;
-}
-
-.sub_cuisine{
-  width: 300px;
-  margin: 0px 20px;
-  border: solid;
-  border-color: #d6d6da;
-}
-
-.sub_cuisine img{
-  background-color: #282c34;
-  height: 200px;
-}
-
-.buy{
-  display: flex;
-}
-
-.buy p{
-  font-size: large;
-}
-
-.btn{
-  font-size: 1.0rem;
-  font-weight: 600;
-  line-height: 1.0;
-  position: relative;
-  display: inline-block;
-  padding: 0.5rem 3rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #fff;
-  background-color: #d83a47;
-  border-radius: 0.5rem;
-}
-
-.btn--red.btn--cubic {
-  border-bottom: 5px solid #9f000c;
-}
-
-.btn--red.btn--cubic:hover {
-  margin-top: 3px;
-  border-bottom: 2px solid #9f000c;
-}
-
-.btn--radius {
-  border-radius: 100vh;
-}
-
 
 /*ヘッダー*/
 header{
@@ -142,4 +76,249 @@ header{
 }
 .acs:hover{
   opacity: 0.8;
+}
+
+/*メニュー*/
+.menu {
+  margin: 15rem auto 5rem;
+  width: fit-content;
+}
+.cuisine{
+  margin: 2rem 0;
+  display: flex;
+}
+
+.sub_cuisine{
+  background-color: #fff;
+  position: relative;
+  width: 18rem;
+  height: 23rem;
+  margin: 0 1.2rem;
+}
+
+.sub_cuisine img{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  height: 12.5rem;
+}
+
+.sub_cuisine h3{
+  position: absolute;
+  top: 11.5rem;
+  left: 1rem;
+}
+
+.buy{
+  display: absolute;
+}
+
+.buy p{
+  position: absolute;
+  top: 13rem;
+  left: 0.8rem;
+  font-size: 1.3rem;
+  color: #6b6b6b;
+}
+
+.btn{
+  font-size: 1.0rem;
+  font-weight: 600;
+  line-height: 1.0;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  background-color: #d83a47;
+  border-radius: 0.5rem;
+}
+
+.btn1{
+  position: absolute;
+  width: 12rem;
+  font-size: 0.8rem;
+  bottom: 4.0rem;
+  right: 0.5rem;
+}
+
+.btn2{
+  position: absolute;
+  width: 12rem;
+  font-size: 0.8rem;
+  bottom: 1.0rem;
+  right: 0.5rem;
+}
+
+/* 以下の2つでボタンが盛り上がる */
+.btn--red.btn--cubic {
+  border-bottom: 0.4rem solid #9f000c;
+}
+
+.btn--red.btn--cubic:hover {
+  margin-top: 3px;
+  border-bottom: 0.55rem solid #9f000c;
+}
+
+.btn--radius {
+  border-radius: 100vh;
+}
+
+/* カート */
+
+.cart{
+  z-index:30;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 25rem;
+  padding: 1rem;
+  background: #fff;
+  border-bottom: 1rem solid #d83a47;
+}
+.cart li{
+  list-style: none;
+}
+
+.each{
+  position: relative;
+  margin-bottom: 0.7rem;
+  height: 4rem;
+  background-color: #ecedf0;
+}
+
+.btn--cancel{
+  position: absolute;
+  border: none;
+  background-color:rgb(121, 115, 115);
+  color: #fff;
+  font-weight: 1000;
+  right: 0.3rem;
+  top: 0.1rem;
+  width: 2rem;
+}
+.btn--cancel:hover{
+  background-color: #9f000c;
+}
+.menuname{
+  position: absolute;
+  top: 0.7rem;
+  left: 0.2rem;
+  font-weight: 500;
+}
+.price{
+  position: relative;
+  top: 2rem;
+  left: 0.2rem;
+  color: #6b6b6b;
+  display: flex;
+}
+
+.inc_dec{
+  position: absolute;
+  display: flex;
+  right: 1.2rem;
+  top: 0.2rem;
+}
+
+.inc_dec button{
+  border: none;
+  margin: 0 0.3rem;
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  font-weight: 1000;
+  color: #fff;
+  background-color: #d83a47;
+}
+.inc_dec button:hover{
+  background-color: #9f000c;
+}
+.eachsum{
+  font-size: 1.4rem;
+  color: #000;
+}
+.sum{
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #9f000c;
+}
+.btn--order{
+  height: 1.4rem;
+  border: none;
+  margin-left: 1rem;
+  color: #fff;
+  background-color: #d83a47;
+  font-weight: 400;
+}
+.btn--order:hover{
+  border-bottom: 0.3rem solid #9f000c;
+}
+
+.comp{
+  font-weight: 600;
+}
+
+/* カートのアイコン */
+.gg-shopping-cart {
+  position: fixed;
+  z-index: 40;
+  bottom: 4rem;
+  right: 5rem;
+  display: block;
+  box-sizing: border-box;
+  transform: scale(var(--ggs,3));
+  width: 20px;
+  height: 21px;
+  background:
+      linear-gradient(
+          to left,currentColor 12px,
+          transparent 0)
+          no-repeat -1px 6px/18px 2px,
+      linear-gradient(
+          to left,currentColor 12px,
+          transparent 0)
+          no-repeat 6px 14px/11px 2px,
+      linear-gradient(
+          to left,currentColor 12px,
+          transparent 0)
+          no-repeat 0 2px/4px 2px,
+      radial-gradient(
+          circle,currentColor 60%,
+          transparent 40%)
+          no-repeat 12px 17px/4px 4px,
+      radial-gradient(
+          circle,currentColor 60%,
+          transparent 40%)
+          no-repeat 6px 17px/4px 4px
+}
+
+.gg-shopping-cart::after,
+.gg-shopping-cart::before {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  width: 2px;
+  height: 14px;
+  background: currentColor;
+  top: 2px;
+  left: 4px;
+  transform: skew(12deg)
+}
+
+.gg-shopping-cart::after {
+  height: 10px;
+  top: 6px;
+  left: 16px;
+  transform: skew(-12deg)
 }

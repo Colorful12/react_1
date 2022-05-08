@@ -61,8 +61,8 @@ export default function Menu() {
       <h3>{cuisine[0].name}</h3>
       <div class="buy">
         <p>￥{cuisine[0].price} </p>
-        <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[0])}>すぐに購入</button>
-        <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[0])}>カートに追加</button>
+        <button class="btn btn1 btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[0])}>すぐに購入</button>
+        <button class="btn btn2 btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[0])}>カートに追加</button>
       </div>
     </div>
     { 
@@ -72,8 +72,8 @@ export default function Menu() {
         <h3>{cuisine[1].name}</h3>
         <div class="buy">
           <p>￥{cuisine[1].price}</p>
-          <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[1])}>すぐに購入</button>
-          <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[1])}>カートに追加</button>
+          <button class="btn btn1 btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[1])}>すぐに購入</button>
+          <button class="btn btn2 btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[1])}>カートに追加</button>
         </div>
       </div>
     ) : ( <div></div> )
@@ -85,8 +85,8 @@ export default function Menu() {
         <h3>{cuisine[2].name}</h3>
         <div class="buy">
           <p>￥{cuisine[2].price}</p>
-          <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[2])}>すぐに購入</button>
-          <button class="btn btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[2])}>カートに追加</button>
+          <button class="btn btn1 btn--red btn--radius btn--cubic" onClick={() => menuClick(cuisine[2])}>すぐに購入</button>
+          <button class="btn btn2 btn--red btn--radius btn--cubic" onClick={() => menuAdd(cuisine[2])}>カートに追加</button>
         </div>
       </div>
     ) : ( <div></div> )
@@ -99,22 +99,32 @@ export default function Menu() {
       <div class="menu">
         {menu}
         {console.log(cartDetails)}
+      </div>
+      <i class="gg-shopping-cart"></i>
+      <div class="cart">
         <ul>
           {Object.values(cartDetails).map((cart) => {
             return (
-              <li key={cart.id}>
-
-                {cart.name} - {cart.formattedPrice} * {cart.quantity} = {cart.formattedValue}
-                <button onClick={() => decrementItem(cart.id)}>１つ減らす</button>
-               <button onClick={() => incrementItem(cart.id)}>１つ増やす</button>
-              <button onClick={() => removeItem(cart.id)}>削除</button>
-              </li>
+              <div class="each">
+                <li key={cart.id}>
+                  <button class="btn--cancel" onClick={() => removeItem(cart.id)}>×</button>
+                  <div class="menuname">{cart.name}</div>
+                  <div class="price">
+                    {cart.formattedValue}
+                    <div class="inc_dec">
+                      <button  onClick={() => decrementItem(cart.id)}>-</button>
+                      <div class="eachsum"> {cart.quantity}</div>
+                      <button  onClick={() => incrementItem(cart.id)}>+</button>
+                    </div>
+                  </div>
+                </li>
+              </div>
             )
           })}
-          <li>合計: {formattedTotalPrice}</li>
+          <li class="sum">合計 : {formattedTotalPrice}</li>
         </ul>
-        <button
-                    variant='primary'
+        <button class="btn--order comp"
+          variant='primary'
                     disabled={cartCount < 1}
                     onClick={async () => {
                         try {
@@ -124,12 +134,11 @@ export default function Menu() {
                             window.alert(e.message);
                         }
                     }}
-                >
-                    注文する
-                </button>
-                <button variant="outline-danger" onClick={() => clearCart()}>カートを空にする</button>
-                
-      </div>
+         >
+           注文する
+        </button>
+        <button class="btn--order" variant="outline-danger" onClick={() => clearCart()}>カートを空にする</button>
+      </div>         
     </main>
   );
 }
