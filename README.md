@@ -6,6 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 食堂用のオンライン注文アプリ
 
 メールアドレスによるログイン機能と、Stripeによる決済機能を実装.
+![image](https://user-images.githubusercontent.com/63466820/167309230-d7588e66-914e-4019-a24f-45c47cdee874.png)
 
 ## 実行方法
 
