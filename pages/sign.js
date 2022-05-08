@@ -40,24 +40,25 @@ export default function SignUp() {
         
          <div style={{ margin: '2em' }}>
           <Header/>
-
-         <h1>ユーザ登録</h1>
-         <form onSubmit={handleSubmit}>
-        <div>
-          <label>メールアドレス</label>
-          <input name="email" type="email" placeholder="email" onChange={(event)=>handleChangeEmail(event)}/>
+        <div class="form">
+          <h1>ユーザ登録</h1>
+          <form  onSubmit={handleSubmit}>
+          <div class="input mail re_form">
+            <label>メールアドレス</label>
+            <input name="email" type="email" onChange={(event)=>handleChangeEmail(event)}/>
+          </div>
+          <div class="input pass re_form">
+            <label>パスワード</label>
+            <input name="password" type="password" onChange={(event)=>handleChangePassword(event)} />
+          </div>
+          <div>
+            <button>登録</button>
+          </div>
+          <div class="to_next">
+            <u><a href= "http://localhost:3000/login" >ログイン画面へ</a></u>
+          </div>
+        </form>
         </div>
-        <div>
-          <label>パスワード</label>
-          <input name="password" type="password" placeholder='password' onChange={(event)=>handleChangePassword(event)} />
-        </div>
-        <div>
-          <button>登録</button>
-        </div>
-        <div>
-          <u><a href= "http://localhost:3000/login" >ログイン画面へ</a></u>
-        </div>
-      </form>
       </div>
      
       )

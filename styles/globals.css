@@ -322,3 +322,95 @@ header{
   left: 16px;
   transform: skew(-12deg)
 }
+
+/* ログイン */
+
+.form{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #dedde2;
+  margin: 5rem auto;
+  width: 40rem;
+  height: 20rem;
+}
+
+.form form{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 35rem;
+  background-color: #fff;
+}
+
+
+.input{
+  position: relative;
+  width: 33rem;
+  height: 43rem;
+}
+
+.input input{
+  position: absolute;
+  background-color: #fff;
+  width: 22rem;
+  height: 2.5rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border: 0;
+}
+
+.mail{
+  position: absolute;
+  top: 0rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.pass{
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.form h1{
+  position: absolute;
+  top: -0.5rem;
+  left: 2rem;
+}
+.form button{
+  position: absolute;
+  top: 8rem;
+  left: 50%;
+  width: 10rem;
+  height: 3rem;;
+  transform: translate(-50%, 0%);
+  border: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #d83a47;
+  color: #fff;
+}
+.form button:hover{
+  background-color: #ca2735;
+}
+
+.to_next{
+  position: absolute;
+  top: 12rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: rgb(28, 85, 241);
+}
+
+.re_form{
+  position: absolute;
+  left: 60%;
+}
+
+.re_form label{
+  position: absolute;
+  left: -14%;
+}

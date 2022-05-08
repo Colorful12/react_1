@@ -26,24 +26,22 @@ const handleSubmit = (event) => {
   return (
     <div>
       <Header/>
-      <h1>ログイン</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>メールアドレス</label>
-          <input name="email" type="email" placeholder="email" />
-        </div>
-
-        <div>
-          <label>パスワード</label>
-          <input name="password" type="password" placeholder="password" />
-        </div>
-        <div>
-          <button>ログイン</button>
-        </div>
-        <div>
-          ユーザ登録は<u><a href= "http://localhost:3000/sign" >こちら</a></u>から
-        </div>
-      </form>
+      <div class="form">
+        <form onSubmit={handleSubmit}>
+          <div class="input mail">
+            <input name="email" type="email" placeholder="メールアドレス" />
+          </div>
+          <div class="input pass">
+            <input name="password" type="password" placeholder="パスワード" />
+          </div>
+          <div>
+            <button>ログイン</button>
+          </div>
+          <div class="to_next">
+            ユーザ登録は<u><a href= "http://localhost:3000/sign" >こちら</a></u>から
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
