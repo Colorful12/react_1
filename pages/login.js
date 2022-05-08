@@ -4,15 +4,22 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import Header from './header'
 
 const Login = () => {
-  const handleSubmit = (event) => {
-    const auth = getAuth();
-signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in
-    const user = userCredential.user;
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const { email, password } = event.target.elements;
+
+
+  signInWithEmailAndPassword(auth, email.value, password.value)
+  .then((user) => {
+    console.log('ログイン成功=', user.user.uid);
     window.open('http://localhost:3000/')
-    // ...
   })
+  .catch((error) => {
+    console.error(error)
+    alert('パスワードまたはメールアドレスが違います。')
+  })    
+  
    
   };
 
@@ -25,6 +32,7 @@ signInWithEmailAndPassword(auth, email, password)
           <label>メールアドレス</label>
           <input name="email" type="email" placeholder="email" />
         </div>
+
         <div>
           <label>パスワード</label>
           <input name="password" type="password" placeholder="password" />
