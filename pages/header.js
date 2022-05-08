@@ -1,4 +1,5 @@
 import React from 'react';
+import { auth } from './firebase';
 import { getAuth, signOut } from "firebase/auth";
 
 class Head extends React.Component {
